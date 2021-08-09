@@ -3,6 +3,15 @@ provider "azurerm" {
   inputs:
     provider: 'azurerm'
     command: 'init'
+    backendServiceArm: 'Free Trial (ff6e05ff-b300-4499-8919-c44b7252fffc)'
+    backendAzureRmResourceGroupName: 'Test'
+    backendAzureRmStorageAccountName: 'test999'
+    backendAzureRmContainerName: 'greekcoder'
+    backendAzureRmKey: 'key33'
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
   features {}
   client_id             =  "2fb5a220-8f07-4317-80d9-06a9fb895c26"
   client_secret         =  "245d4be1-cd2d-4afb-ab06-e8270c9d695c"
